@@ -1,0 +1,7 @@
+<h1>Add Items</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="container">{{form.as_p}}</div>
+
+  <input type="submit" value="Submit" />
+</form>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container py-5">
+  <h1 class="text-center mb-3">Contact Messages</h1>
+  <h2 class="text-center text-muted mb-5">Messages from Website Visitors</h2>
+
+  <div class="row">
+    {% for contact in object_list %}
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ contact.name }}</h5>
+          <p class="card-text">
+            <strong>Email:</strong
+            ><a href="mailto:{{contact.email}}"> {{ contact.email }} </a>
+          </p>
+          <p class="card-text"><strong>Message:</strong></p>
+          <p class="card-text">{{ contact.message }}</p>
+          <p class="card-text">
+            <small class="text-muted"
+              >Received: {{ contact.created_at|date:"M d, Y g:i A" }}</small
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+      <p class="text-center text-muted">No contact messages received yet.</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

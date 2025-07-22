@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<ul>
+  <li><a href="{% url 'mysite:contact_list' %}">Contact Us Inbox</a></li>
+  <li><a href="{% url 'mysite:create_player' %}">Add A New Player</a></li>
+  <li><a href="{% url 'mysite:add_item' %}">Add A New Item to Shop</a></li>
+</ul>
+
+{% endblock content %}

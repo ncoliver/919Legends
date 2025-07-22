@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="header">
+  <h1 class="display-1">Raleigh 919 Legends</h1>
+  <h3 class="display-6 p-2 bg-dark text-white">
+    Home of the 'biggest TBT upset' in TBT History!
+  </h3>
+</div>
+<!-- Carousel of images (3) -->
+<div
+  id="carouselExampleSlidesOnly"
+  class="carousel slide active"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="{% static 'mysite/image1.jpeg' %}"
+        class="d-block w-40"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'mysite/image2.jpeg' %}"
+        class="d-block w-40"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'mysite/image3.jpeg' %}"
+        class="d-block w-40"
+        alt="..."
+      />
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

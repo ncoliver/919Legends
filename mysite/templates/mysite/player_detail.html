@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1>Player Details</h1>
+
+  {% if player %}
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">{{ player.first_name }} {{ player.last_name }}</h2>
+      <p class="card-text">
+        <strong>Jersey Number:</strong> #{{ player.jersey_number }}
+      </p>
+      <p class="card-text"><strong>Position:</strong> {{ player.position }}</p>
+      <p class="card-text"><strong>Email:</strong> {{ player.email }}</p>
+      <p class="card-text">
+        <strong>Location:</strong> {{ player.city }}, {{ player.state }}
+      </p>
+      <p class="card-text">
+        <strong>Description:</strong> {{ player.description }}
+      </p>
+    </div>
+  </div>
+  {% else %}
+  <p>No player found.</p>
+  {% endif %}
+
+  <a href="{% url 'mysite:team' %}" class="btn btn-primary mt-3"
+    >Back to Team</a
+  >
+</div>
+{% endblock content %}
