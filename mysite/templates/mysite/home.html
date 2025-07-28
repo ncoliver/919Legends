@@ -1,0 +1,24 @@
+{% extends 'mysite/base.html' %}
+{% load static%}
+
+{% block content %}
+    <!-- HEADER -->
+    <section id="header">
+        <div class="container text-center">
+            <div class="col-md-6">
+                <img src="{% static 'images/aba_logo.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-1">Main Menu</h1>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#">About</a></li>
+                    <li class="list-group-item"><a href="#">Team</a></li>
+                    <li class="list-group-item"><a href="#">Sponsor</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock content %}
