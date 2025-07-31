@@ -1,24 +1,196 @@
-{% extends 'mysite/base.html' %}
-{% load static%}
-
-{% block content %}
-    <!-- HEADER -->
-    <section id="header">
-        <div class="container text-center">
-            <div class="col-md-6">
-                <img src="{% static 'images/aba_logo.jpg' %}" alt="">
-            </div>
-            <div class="col-md-6">
-                <h1 class="display-1">Main Menu</h1>
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="#">About</a></li>
-                    <li class="list-group-item"><a href="#">Team</a></li>
-                    <li class="list-group-item"><a href="#">Sponsor</a></li>
-                </ul>
-            </div>
+{% extends 'mysite/base.html' %} {% load static %} {% block content %}
+<!-- HERO SECTION -->
+<section id="hero" class="hero-section text-white py-5">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      <!-- LEFT: Brand and Navigation -->
+      <div class="col-md-6 mb-5 mb-md-0">
+        <h1 class="display-3 fw-bold mb-3">Raleigh 919 Legends</h1>
+        <p class="lead mb-4">Est. 2025 — Defying Odds, One Game at a Time.</p>
+        <div class="button-group">
+          <a
+            href="#"
+            class="circle-btn circle-btn-about text-white text-decoration-none"
+            >About</a
+          >
+          <a
+            href="#"
+            class="circle-btn circle-btn-team text-white text-decoration-none"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="circle-btn circle-btn-sponsor text-white text-decoration-none"
+            >Sponsor</a
+          >
         </div>
-    </section>
+      </div>
 
+      <!-- RIGHT: Highlight Card -->
+      <div class="col-md-6 d-flex justify-content-center" id="hero-right">
+        <div class="card hero-card shadow-lg border-0 text-white">
+          <img
+            src="{% static 'images/home_logo.png' %}"
+            class="card-img-top p-4"
+            alt="Team Logo"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">The Biggest Upset in TBT History</h5>
+            <p class="card-text">
+              Raleigh's finest shocked the nation — rewriting basketball history
+              in 2025. Relive the journey.
+            </p>
+            <a href="#" class="btn btn-outline-light btn-sm mt-3">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="downarrow text-center mt-4">
+      <a href="#about"
+        ><i class="fa-solid fa-angle-down fa-2x text-white"></i
+      ></a>
+    </div>
+  </div>
+</section>
 
+<!-- END HEADER SECTION -->
 
+<!-- ABOUT SECTION START -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-header col-md-6">
+        <h3>About Legends</h3>
+        <img
+          src="{% static 'images/abalogo.png'%}"
+          alt=""
+          class="about-img img-fluid"
+          width="300"
+          height="300"
+        />
+      </div>
+      <div class="col-md-6">
+        <p class="lead">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
+          recusandae sapiente, rem modi soluta eaque distinctio aliquam,
+          dolorum, vel aspernatur veritatis eum aliquid! Consequuntur, animi.
+          Ipsam odio quam commodi voluptas?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          dignissimos accusamus optio doloribus, vero nesciunt, earum totam non
+          hic fuga amet quam error tempora corporis similique quasi excepturi!
+          Temporibus, consequuntur!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END OF ABOUT SECTION -->
+
+<!-- START OF TEAM SECTION -->
+<section id="team">
+  <div class="container">
+    <h2>Raleigh 919 - Team Section</h2>
+    <div class="row">
+      <div class="card-group">
+        <div class="card col-md-4">
+          <img
+            class="card-img-top"
+            src="{% static 'images/aba_words.png' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-dark">Card title</h5>
+            <p class="card-text text-dark">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card col-md-4">
+          <img
+            class="card-img-top card text-white bg-dark mb-3"
+            src="{% static 'images/tbt1.png' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body text-dark">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card col-md-4">
+          <img
+            class="card-img-top"
+            src="{% static 'images/home_logo.png' %}"
+            alt="Card image cap"
+          />
+          <div class="card-body text-dark">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END OF TEAM SECTION -->
+
+<!-- START CONTACT US SECTION -->
+<section id="contact-us" class="contact-us-section">
+  <div class="contact-us-overlay">
+    <div class="container">
+      <div class="row contact-cain">
+        <h1>Contact Us</h1>
+
+        <div class="contact-right col">
+          <form method="post">
+            {%csrf_token%}
+            <input type="text" id="name" name="name" placeholder="Your Name" />
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input
+              type="text"
+              id="message"
+              name="message"
+              placeholder="Message"
+            />
+            <button type="submit">Contact Us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END CONTACT US SECTIONS -->
+
+<!-- START OF FOOTER -->
+<section id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p>Raleigh 919 Legends</p>
+        <p>Raleigh, NC</p>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}

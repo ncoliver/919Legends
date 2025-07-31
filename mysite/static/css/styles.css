@@ -1,27 +1,294 @@
-body, html {
-    height: 100%;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/* General Styles */
+body {
+  background-color: #0b0c10;
+  color: #f8f9fa;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* ---------- BASE.HTML ----------- */
+
+/* --- NAVBAR - BASE.HTML --- */
+/* Base.html Nav */
+
+.navbar {
+  font-weight: 400;
+  font-size: 20px;
 }
 
+/* ----- END NAVBAR ----- */
 
+/* ---------- START OF HOME.HMTL ---------- */
 
-/* ----- NAVBAR ----- */
-
-
-/* ----- HEADER ----- */
-
-
-/* ----- LINKS ----- */
-
-ul .list-group-item:hover {
-    cursor: pointer;
-    background-color: rgba(244, 243, 243, 0.7);
+/* ----- HERO SECTION - HOME.HTML ------ */
+.hero-section .downarrow {
+  font-size: 50px;
 }
 
-/* ----- CONTACT ----- */
+/* Hero Section Background */
+.hero-section {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("../images/goat.png") center center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
 
+/* Headings and Text */
+.hero-section h1 {
+  color: #499bec;
+  font-size: 3rem;
+  line-height: 1.2;
+}
 
-/* ----- FOOTER ----- */
+.hero-section h1:hover {
+  color: #d4d8dc;
+  cursor: crosshair;
+  transform: rotateX("230");
+  transition: all 31s ease-in-out;
+}
 
+.hero-section p.lead {
+  font-size: 1.25rem;
+  color: #d1d1d1;
+}
 
+/* ----- NAVIGATION LINKS - HOME.HTML ------ */
 
+/* Nav Links */
+.link-nav {
+  font-size: 2rem;
+  color: #499bec;
+  transition: all 0.3s ease;
+  padding-left: 0;
+  text-decoration: none;
+}
+
+.link-nav:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  transform: translate3d("45");
+  transition: all 2s ease-in-out;
+}
+
+/* Card Styling */
+.hero-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-6px);
+}
+
+.hero-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.hero-card .card-text {
+  font-size: 0.95rem;
+  color: #dee2e6;
+}
+
+/* Buttons */
+.btn-outline-light {
+  border-radius: 50px;
+  padding: 0.4rem 1.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .hero-card {
+    margin-top: 2rem;
+  }
+}
+
+/* Circular Buttons */
+.circle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.circle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  color: #ffffff !important;
+}
+
+/* Ensures good spacing on smaller screens */
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ----- ABOUT SECTION -home.html -----   */
+#about {
+  background-color: #d1d1d1;
+  color: #499bec;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+#about .about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- TEAM SECTION - home.html ----- */
+#team {
+  background-color: #fff;
+  width: 100%;
+}
+
+#team h2 {
+  color: #0b0c10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+#header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#team .card-group {
+  padding: 10px 0px;
+}
+
+/* ----- CONTACT US - home.html ------  */
+
+/* Contact Us Section */
+#contact-us {
+  background: url("../images/goat.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  color: #f2f2f2;
+  padding: 80px 0 0 0;
+  font-family: "Exo 2", sans-serif;
+}
+
+#contact-us .contact-us-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* 60% black overlay */
+  width: 100%;
+  height: 20vh;
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}
+
+#contact-us h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+}
+
+#contact-us .lead {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+#contact-us p {
+  font-size: 1rem;
+  color: #bcbcbc;
+}
+
+.contact-right {
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-right h4 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Form Styles */
+.contact-right form input[type="text"],
+.contact-right form input[type="email"],
+.contact-right form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.contact-right form input:focus,
+.contact-right form textarea:focus {
+  outline: none;
+  border-color: #00d1ff;
+  background-color: #2f2f2f;
+}
+
+.contact-right form button {
+  width: 100%;
+  background-color: #00d1ff;
+  color: #121212;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-right form button:hover {
+  background-color: #00b8e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #contact-us .row.contact {
+    flex-direction: column;
+  }
+
+  .contact-right {
+    margin-top: 40px;
+  }
+}
+
+#contact-us .contact-cain {
+  display: flex;
+  flex-direction: column;
+}
